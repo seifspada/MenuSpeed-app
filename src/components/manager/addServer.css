@@ -1,0 +1,127 @@
+/* Conteneur principal */
+.add-server-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre */
+.add-server-container h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Formulaire */
+.add-server-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Groupe de champs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Labels */
+.form-group label {
+  font-size: 16px;
+  color: #34495e;
+  font-weight: 500;
+}
+
+/* Inputs */
+.form-group input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #dfe6e9;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Bouton principal */
+.add-server-form button[type="submit"] {
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #27ae60;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.add-server-form button[type="submit"]:hover {
+  background-color: #2ecc71;
+  transform: translateY(-2px);
+}
+
+/* Bouton Retour */
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #7f8c8d;
+  background-color: transparent;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #f5f6fa;
+  color: #34495e;
+}
+
+/* Messages d'erreur */
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Message de succès */
+.success-message {
+  color: #27ae60;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+  padding: 10px;
+  background-color: rgba(39, 174, 96, 0.1);
+  border-radius: 6px;
+}
+
+/* Style pour les champs invalides */
+input:invalid {
+  border-color: #e74c3c;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.add-server-container {
+  animation: fadeIn 0.5s ease-out;
+}

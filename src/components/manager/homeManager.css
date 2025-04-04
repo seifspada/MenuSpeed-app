@@ -1,0 +1,232 @@
+:root {
+  --primary-color: #4a6cf7;
+  --secondary-color: #6e8efb;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --bg-light: rgba(255, 255, 255, 0.9);
+  --bg-hover: rgba(74, 108, 247, 0.08);
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --shadow-heavy: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard {
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.dashboard h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--danger-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-light);
+}
+
+.logout-button:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.logout-icon {
+  font-size: 1.2rem;
+}
+
+.restaurant-table {
+  margin-top: 2rem;
+}
+
+.restaurant-table h2 {
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
+  text-align: center;
+}
+
+.restaurant-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: var(--bg-light);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+}
+
+.restaurant-table thead tr {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.restaurant-table th {
+  padding: 1.5rem 1.2rem;
+  text-align: left;
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  letter-spacing: 0.5px;
+}
+
+.restaurant-table td {
+  padding: 1.2rem 1.5rem;
+  color: var(--text-dark);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.restaurant-table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.restaurant-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.restaurant-table tbody tr:hover {
+  background: var(--bg-hover);
+  transform: translateX(4px);
+  cursor: pointer;
+}
+
+.restaurant-table-photo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+}
+
+.no-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.dashboard-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.dashboard-button {
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  color: var(--text-light);
+  border: none;
+  border-radius: 14px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-medium);
+}
+
+.dashboard-button:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-heavy);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .dashboard {
+    max-width: 95%;
+    padding: 2.5rem;
+  }
+
+  .logout-button {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 2rem;
+    margin: 1.5rem auto;
+  }
+
+  .restaurant-table th,
+  .restaurant-table td {
+    padding: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+
+  .restaurant-table-photo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .no-photo {
+    width: 40px;
+    height: 40px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 1.5rem;
+  }
+
+  .restaurant-table table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .restaurant-table th,
+  .restaurant-table td {
+    padding: 0.8rem;
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+  }
+
+  .dashboard-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+}

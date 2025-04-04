@@ -1,0 +1,113 @@
+.dashboard {
+  width: 100%;
+  max-width: 1200px; /* Adapté pour un dashboard plus large */
+  background: rgba(255, 255, 255, 0.15); /* Fond semi-transparent */
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Bordure subtile */
+  border-radius: 24px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto; /* Centrage */
+}
+.dashboard h1{
+  margin: 40px;
+  color: blue;
+}
+
+.dashboard-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-button {
+  margin-top: 20px;
+  padding: 15px 30px; /* Augmenter le padding pour un meilleur confort de clic */
+  font-size: 16px;
+  font-weight: 600; /* Texte en gras */
+  cursor: pointer;
+  width: 600px;
+  border: none; /* Supprimer la bordure par défaut */
+  border-radius: 16px; /* Coins arrondis */
+  color: #ffffff; /* Texte blanc */
+  
+  background: linear-gradient(135deg, #6e8efb, #4a6cf7); /* Dégradé moderne */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  transition: all 0.3s ease; /* Animation fluide */
+}
+
+.dashboard-button:hover {
+  background: linear-gradient(135deg, #4a6cf7, #6e8efb); /* Inverser le dégradé au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+  transform: translateY(-2px); /* Effet de "levée" au survol */
+}
+
+.dashboard-button:active {
+  transform: translateY(0); /* Réinitialiser la transformation lors du clic */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre plus douce lors du clic */
+}
+
+.dashboard-button:focus {
+  outline: none; /* Supprimer le contour par défaut */
+  box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.3); /* Ajouter une bordure de focus subtile */
+}
+
+.manager-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.manager-list th, .manager-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.manager-list th {
+  background-color: #f4f4f4;
+}
+
+.add-manager, .update-manager, .delete-manager {
+  padding: 20px;
+  text-align: center;
+}
+
+.add-manager form, .update-manager form, .delete-manager form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-manager input, .update-manager input, .delete-manager input {
+  padding: 8px;
+  width: 200px;
+}
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ff4d4d; /* Couleur rouge pour le bouton */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.logout-button:hover {
+  background-color: #ff1a1a; /* Changement de couleur au survol */
+}
+
+.logout-icon {
+  font-size: 18px;
+}
